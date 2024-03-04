@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #281F35;
+  font-family: "Anta", sans-serif;
+}
+
+.note {
+  position: absolute;
+  top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3vmin;
+  color: black;
+  -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.3);
+  animation: move 3s linear infinite alternate;
+}
+
+.note .fa {
+  font-size: 4vmin;
+  -webkit-text-stroke: 0.4px rgba(0, 0, 0, 1);
+}
+
+@keyframes move {
+
+  0% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+
+.container {
+  width: 50vmin;
+  height: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vmin;
+  padding: 2vmin;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+}
+
+.container .img {
+  width: 100%;
+  height: 26vmin;
+  object-fit: cover;
+  filter: blur(.2px);
+  border: 1px solid #fff;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+.container .img span {
+  margin-left: 5rem;
+  top: 5rem;
+}
+
+.container .img input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.container p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3vmin;
+}
+
+.container p input {
+  border: none;
+  outline: none;
+  display: inline-block;
+  width: 15vmin;
+  text-align: center;
+  background: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3vmin;
+}
+
+
+.container p .fa {
+  cursor: pointer;
+}
+
+.container p .fa:hover {
+  font-size: 3.5vmin;
+}
+
+
+.container button {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 2.5vmin;
+  text-transform: uppercase;
+  padding: 2vmin;
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  background: #281F35;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.container button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #281F35;
+  outline: 1px solid #281F35;
+}
